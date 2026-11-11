@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #171512;
+    color: #f4eee5;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.header {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #171512;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #bd9568;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav a {
+    color: #ddd4c8;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav a:hover {
+    color: #bd9568;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        linear-gradient(90deg, #171512 10%, rgba(23,21,18,.85) 45%, transparent),
+        url('image (2).jpeg')
+        center/cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    color: #bd9568;
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 95px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #bd9568;
+}
+
+.hero-content > p:not(.subtitle) {
+    color: #c5bdb2;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: #bd9568;
+    color: #171512;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    background: #e0b88a;
+    transform: translateY(-3px);
+}
+
+.about {
+    padding: 110px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about h2, .menu h2, .contact h2 {
+    font-size: 55px;
+}
+
+.about-text {
+    max-width: 450px;
+    line-height: 1.9;
+    color: #aaa197;
+}
+
+.menu {
+    padding: 100px 10%;
+    background: #211e19;
+}
+
+.menu h2 {
+    margin-bottom: 50px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product {
+    background: #2c2822;
+    padding: 15px 15px 25px;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+.product-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 22px;
+}
+
+.coffee-one {
+    background-image: url('image (1).jpeg');
+}
+
+.coffee-two {
+    background-image: url('image (3).jpeg');
+}
+
+.coffee-three {
+    background-image: url('image.jpeg');
+}
+
+.product h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: #aaa197;
+    margin-bottom: 20px;
+}
+
+.product strong {
+    color: #bd9568;
+}
+
+.contact {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 35px;
+}
+
+footer {
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    color: #82796f;
+    border-top: 1px solid #38332c;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: #211e19;
+        padding: 25px;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 7%;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 75px 7%;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        padding: 75px 7%;
+    }
+
+    .about h2, .menu h2, .contact h2 {
+        font-size: 42px;
+    }
+
+    footer {
+        gap: 15px;
+        flex-direction: column;
+    }
+}
