@@ -1,7 +1,3 @@
-Моё портфолио
-
-* BREWLINE — кофейня
-* NORTHWAY — путешествия
-* FORMA — дизайн интерьеров
-
-Технологии: HTML, CSS, JavaScript.
+<h3><a href="BREWLINE/">BREWLINE — кофейня</a></h3>
+<h3><a href="FORMA/">NORTHWAY — путешествия</a></h3>
+<h3><a href="NORTHWAY/">FORMA — дизайн интерьеров</a></h3>
