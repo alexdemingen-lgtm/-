@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- Atlas Coffee — учебный проект по вёрстке. Автор: Алексей, 2026. -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas Coffee — спешелти-обжарка в Москве</title>
+  <meta name="description" content="Atlas Coffee — небольшая обжарка спешелти-кофе. Свежие лоты из Эфиопии, Колумбии и Кении, подписка на кофе каждую среду.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">К содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-word">ATLAS</span>
+        <span class="logo-sub">coffee roasters</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#coffee">Кофе</a>
+        <a href="#roast">Обжарка</a>
+        <a href="#subscribe">Подписка</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="cart" href="#coffee" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M4 7h16l-1.4 12H5.4L4 7Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <a class="btn btn-dark header-btn" href="#subscribe">Подписка</a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow"><span aria-hidden="true"></span> Спешелти-обжарка · Москва</p>
+          <h1>Кофе, который<br>знает свой<br><em>маршрут</em>.</h1>
+          <p class="hero-lead">
+            Покупаем лоты напрямую у фермеров, обжариваем маленькими партиями
+            и отправляем в течение 48 часов. Чтобы в вашей чашке был вкус места,
+            а не просто «крепкий кофе».
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#coffee">Выбрать кофе <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-line" href="#roast">Наша обжарка</a>
+          </div>
+          <p class="hero-note"><span class="dot" aria-hidden="true"></span> Ближайшая обжарка — среда, 12 ноября</p>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-ring" aria-hidden="true"></div>
+
+          <svg class="bag" viewBox="0 0 320 430" role="img" aria-label="Пакет кофе Atlas Coffee, Эфиопия Гуджи, 250 грамм">
+            <defs>
+              <linearGradient id="bagBody" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#4a2a1a"/>
+                <stop offset="0.55" stop-color="#38200f"/>
+                <stop offset="1" stop-color="#26140a"/>
+              </linearGradient>
+            </defs>
+            <ellipse cx="160" cy="407" rx="104" ry="14" fill="#241610" opacity="0.14"/>
+            <rect x="55" y="46" width="210" height="30" rx="5" fill="#2a160e"/>
+            <rect x="63" y="51" width="194" height="2" fill="#f4e9d5" opacity="0.16"/>
+            <rect x="63" y="57" width="194" height="1" fill="#f4e9d5" opacity="0.1"/>
+            <rect x="55" y="72" width="210" height="322" rx="10" fill="url(#bagBody)"/>
+            <rect x="60" y="78" width="5" height="310" fill="#ffffff" opacity="0.05"/>
+            <rect x="255" y="78" width="4" height="310" fill="#000000" opacity="0.18"/>
+
+            <rect x="82" y="148" width="156" height="192" rx="3" fill="#f4e9d5"/>
+            <rect x="82" y="148" width="156" height="192" rx="3" fill="none" stroke="#c9b795" stroke-width="1"/>
+
+            <text x="160" y="192" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="30" letter-spacing="5" fill="#2a1a12">ATLAS</text>
+            <text x="160" y="210" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" letter-spacing="3" fill="#6c5844">COFFEE ROASTERS</text>
+            <line x1="98" y1="224" x2="222" y2="224" stroke="#c9b795" stroke-width="1"/>
+            <text x="160" y="248" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="3" fill="#2a1a12">ETHIOPIA</text>
+            <text x="160" y="264" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" letter-spacing="2" fill="#6c5844">GUJI · LOT 12</text>
+            <text x="160" y="292" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="9" font-style="italic" fill="#4a3524">красная смородина · жасмин · мёд</text>
+            <line x1="98" y1="306" x2="222" y2="306" stroke="#c9b795" stroke-width="1"/>
+            <text x="160" y="326" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" letter-spacing="2" fill="#2a1a12">250 G · LIGHT ROAST</text>
+
+            <text x="160" y="374" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6" letter-spacing="2" fill="#f4e9d5" opacity="0.55">ROASTED 12.11.2026 · MOSCOW</text>
+          </svg>
+
+          <svg class="seal" viewBox="0 0 140 140" aria-hidden="true">
+            <defs>
+              <path id="sealCircle" d="M70,70 m-51,0 a51,51 0 1,1 102,0 a51,51 0 1,1 -102,0"/>
+            </defs>
+            <circle cx="70" cy="70" r="66" fill="#f4e9d5" stroke="#2a1a12" stroke-opacity="0.15"/>
+            <text font-family="JetBrains Mono, monospace" font-size="8.5" letter-spacing="2.4" fill="#2a1a12">
+              <textPath href="#sealCircle">FRESH ROASTED · SMALL BATCH · SINCE 2019 · </textPath>
+            </text>
+            <text x="70" y="80" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="34" fill="#2a1a12">A</text>
+          </svg>
+
+          <div class="hero-chip hero-chip-top">
+            <span class="hero-chip-label">Обжарка</span>
+            <strong>12 ноября</strong>
+          </div>
+          <div class="hero-chip hero-chip-bottom">
+            <span class="hero-chip-label">Вкусовой профиль</span>
+            <strong>86.5 / 100</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ БЕГУЩАЯ СТРОКА ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Ethiopia Guji</span><i></i><span>Colombia Huila</span><i></i><span>Kenya Nyeri</span><i></i><span>Brazil Cerrado</span><i></i><span>Rwanda Nyamasheke</span><i></i>
+        <span>Ethiopia Guji</span><i></i><span>Colombia Huila</span><i></i><span>Kenya Nyeri</span><i></i><span>Brazil Cerrado</span><i></i><span>Rwanda Nyamasheke</span><i></i>
+      </div>
+    </div>
+
+    <!-- ============ МАНИФЕСТ ============ -->
+    <section class="manifesto" id="roast">
+      <div class="container manifesto-grid">
+        <div class="manifesto-art" data-reveal>
+          <div class="cup" aria-hidden="true">
+            <span class="cup-saucer"></span>
+            <span class="cup-ring"></span>
+            <span class="cup-surface"></span>
+            <span class="cup-highlight"></span>
+            <span class="cup-handle"></span>
+          </div>
+          <div class="manifesto-caption">
+            <span>Каппинг · лот № 12</span>
+            <strong>86.5</strong>
+          </div>
+        </div>
+
+        <div class="manifesto-text">
+          <p class="label" data-reveal>01 / Манифест</p>
+          <h2 data-reveal>Маленькие партии.<br><em>Большой</em> характер.</h2>
+          <p data-reveal>
+            Мы не гонимся за объёмом. Наша обжарка — это 12 килограммов в неделю,
+            ручной контроль на каждом этапе и профиль, который раскрывает ягоду,
+            а не прячет её за горечью.
+          </p>
+          <p data-reveal>
+            Каждый лот мы пробуем вслепую, спорим о нюансах и только потом ставим
+            на полку. Если кофе не нравится нам — он не попадёт к вам.
+          </p>
+
+          <dl class="stats" data-reveal>
+            <div>
+              <dt>12</dt>
+              <dd>ферм-партнёров</dd>
+            </div>
+            <div>
+              <dt>48 ч</dt>
+              <dd>от обжарки до отправки</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>компромиссов по вкусу</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КОФЕ ============ -->
+    <section class="shop" id="coffee">
+      <div class="container">
+        <div class="shop-head">
+          <div>
+            <p class="label" data-reveal>02 / Полка</p>
+            <h2 data-reveal>Свежая обжарка</h2>
+          </div>
+          <p class="shop-note" data-reveal>Каждый пакет — 250 г. Обжариваем по средам, отправляем в четверг. Помол выбираем под ваш способ заваривания.</p>
+        </div>
+
+        <div class="products">
+          <article class="product" data-reveal>
+            <div class="product-top">
+              <span class="product-num">01</span>
+              <span class="product-badge">Новый лот</span>
+            </div>
+            <div class="product-visual product-visual-eth">
+              <svg viewBox="0 0 120 170" aria-hidden="true">
+                <rect x="26" y="12" width="68" height="12" rx="2"/>
+                <rect x="20" y="24" width="80" height="132" rx="5"/>
+                <rect x="32" y="58" width="56" height="66" rx="2" class="product-label"/>
+                <text x="60" y="82" text-anchor="middle" class="product-svg-title">A</text>
+                <text x="60" y="96" text-anchor="middle" class="product-svg-small">ETHIOPIA</text>
+                <text x="60" y="108" text-anchor="middle" class="product-svg-small">250 G</text>
+              </svg>
+            </div>
+            <h3>Эфиопия Гуджи</h3>
+            <p class="product-notes">Красная смородина · жасмин · мёд</p>
+            <div class="product-bottom">
+              <span class="product-price">1 190 ₽</span>
+              <button class="add" type="button" data-add="Эфиопия Гуджи">Добавить</button>
+            </div>
+          </article>
+
+          <article class="product" data-reveal>
+            <div class="product-top">
+              <span class="product-num">02</span>
+              <span class="product-badge product-badge-muted">Хит</span>
+            </div>
+            <div class="product-visual product-visual-col">
+              <svg viewBox="0 0 120 170" aria-hidden="true">
+                <rect x="26" y="12" width="68" height="12" rx="2"/>
+                <rect x="20" y="24" width="80" height="132" rx="5"/>
+                <rect x="32" y="58" width="56" height="66" rx="2" class="product-label"/>
+                <text x="60" y="82" text-anchor="middle" class="product-svg-title">A</text>
+                <text x="60" y="96" text-anchor="middle" class="product-svg-small">COLOMBIA</text>
+                <text x="60" y="108" text-anchor="middle" class="product-svg-small">250 G</text>
+              </svg>
+            </div>
+            <h3>Колумбия Уила</h3>
+            <p class="product-notes">Карамель · красное яблоко · какао</p>
+            <div class="product-bottom">
+              <span class="product-price">990 ₽</span>
+              <button class="add" type="button" data-add="Колумбия Уила">Добавить</button>
+            </div>
+          </article>
+
+          <article class="product" data-reveal>
+            <div class="product-top">
+              <span class="product-num">03</span>
+              <span class="product-badge product-badge-muted">Осталось 8</span>
+            </div>
+            <div class="product-visual product-visual-ken">
+              <svg viewBox="0 0 120 170" aria-hidden="true">
+                <rect x="26" y="12" width="68" height="12" rx="2"/>
+                <rect x="20" y="24" width="80" height="132" rx="5"/>
+                <rect x="32" y="58" width="56" height="66" rx="2" class="product-label"/>
+                <text x="60" y="82" text-anchor="middle" class="product-svg-title">A</text>
+                <text x="60" y="96" text-anchor="middle" class="product-svg-small">KENYA</text>
+                <text x="60" y="108" text-anchor="middle" class="product-svg-small">250 G</text>
+              </svg>
+            </div>
+            <h3>Кения Ньери</h3>
+            <p class="product-notes">Чёрная смородина · грейпфрут · тростниковый сахар</p>
+            <div class="product-bottom">
+              <span class="product-price">1 290 ₽</span>
+              <button class="add" type="button" data-add="Кения Ньери">Добавить</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРОЦЕСС ============ -->
+    <section class="process">
+      <div class="container">
+        <div class="process-head">
+          <p class="label label-light" data-reveal>03 / Процесс</p>
+          <h2 data-reveal>От фермы<br>до вашей чашки</h2>
+        </div>
+
+        <ol class="steps">
+          <li data-reveal>
+            <span class="steps-num">01</span>
+            <h3>Отбор</h3>
+            <p>Дегустируем десятки образцов, выбираем лоты с чистым вкусом и понятной историей.</p>
+          </li>
+          <li data-reveal>
+            <span class="steps-num">02</span>
+            <h3>Обжарка</h3>
+            <p>12 кг в партии, ручная настройка профиля, контроль температуры каждую минуту.</p>
+          </li>
+          <li data-reveal>
+            <span class="steps-num">03</span>
+            <h3>Отдых</h3>
+            <p>Кофе «дышит» от 5 до 10 дней — именно тогда вкус раскрывается полностью.</p>
+          </li>
+          <li data-reveal>
+            <span class="steps-num">04</span>
+            <h3>Доставка</h3>
+            <p>Упаковываем в день отправки. По Москве — курьером, по России — СДЭК.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ЦИТАТА ============ -->
+    <section class="quote">
+      <div class="container quote-inner">
+        <p class="quote-mark" aria-hidden="true">“</p>
+        <blockquote data-reveal>
+          Хороший кофе не кричит. Он просто заставляет вас поставить чашку
+          и на секунду замолчать.
+        </blockquote>
+        <p class="quote-author" data-reveal>— Мария Литвинова, главный обжарщик</p>
+      </div>
+    </section>
+
+    <!-- ============ ПОДПИСКА ============ -->
+    <section class="subscribe" id="subscribe">
+      <div class="container">
+        <div class="subscribe-card" data-reveal>
+          <div class="subscribe-text">
+            <p class="label">04 / Подписка</p>
+            <h2>Свежий кофе<br>по <em>средам</em></h2>
+            <p>Два пакета по 250 г каждый месяц. Новые лоты, никакой рутины и скидка 10% на всё меню.</p>
+            <ul class="checks">
+              <li>Бесплатная доставка по Москве</li>
+              <li>Можно пропустить или отменить в любой момент</li>
+              <li>Первый пакет — за 1 ₽</li>
+            </ul>
+          </div>
+
+          <form class="form" id="subscribeForm" novalidate>
+            <div class="field">
+              <label for="email">Электронная почта</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="grind">Помол</label>
+              <select id="grind" name="grind">
+                <option>В зёрнах</option>
+                <option>Для эспрессо</option>
+                <option>Для воронки</option>
+                <option>Для френч-пресса</option>
+              </select>
+            </div>
+            <button class="btn btn-dark btn-wide" type="submit">Оформить подписку <span aria-hidden="true">→</span></button>
+            <p class="form-note">Нажимая кнопку, вы соглашаетесь с условиями обработки данных. Это демо-форма — письма не отправляются.</p>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ ПОДВАЛ ============ -->
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo logo-footer" href="#top">
+            <span class="logo-word">ATLAS</span>
+            <span class="logo-sub">coffee roasters</span>
+          </a>
+          <p class="footer-text">Обжариваем с 2019 года.<br>Маленькими партиями, с большим вниманием.</p>
+        </div>
+        <div>
+          <h3>Обжарка</h3>
+          <p>Москва, Большая Никитская, 12<br>Пн–Пт: 09:00–20:00<br>Сб–Вс: 10:00–19:00</p>
+        </div>
+        <div>
+          <h3>Связаться</h3>
+          <p><a href="mailto:hello@atlascoffee.example">hello@atlascoffee.example</a><br><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+          <div class="socials">
+            <a href="#" aria-label="Telegram">TG</a>
+            <a href="#" aria-label="VK">VK</a>
+            <a href="#" aria-label="Pinterest">PT</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-word" aria-hidden="true">ATLAS</p>
+
+      <div class="footer-bottom">
+        <span>© 2026 Atlas Coffee. Демо-проект.</span>
+        <a href="#top">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
