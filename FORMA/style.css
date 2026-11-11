@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f2f0eb;
+    color: #24231f;
+    font-family: 'Manrope', sans-serif;
+}
+
+header {
+    height: 85px;
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 29px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #24231f;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    font-size: 13px;
+    vertical-align: top;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #55534d;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #a17b50;
+}
+
+#menuBtn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 55px 9%;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text > p, .tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a17b50;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.hero a, .contact a {
+    color: white;
+    background: #24231f;
+    display: inline-block;
+    padding: 17px 27px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.hero a:hover, .contact a:hover {
+    background: #a17b50;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    height: 520px;
+    background: url('image.jpeg')
+    center/cover;
+}
+
+.about {
+    text-align: center;
+    padding: 120px 10%;
+    background: #e8e5de;
+}
+
+.about h2, .projects h2, .services h2, .contact h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.about > p:last-child {
+    max-width: 500px;
+    margin: 25px auto 0;
+    color: #77736c;
+    line-height: 1.8;
+}
+
+.projects {
+    padding: 100px 9%;
+}
+
+.projects h2 {
+    margin-bottom: 50px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 25px;
+}
+
+.project-img {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.large {
+    grid-column: span 2;
+}
+
+.large .project-img {
+    height: 500px;
+}
+
+.img1 {
+    background-image: url('image (1).jpeg');
+}
+
+.img2 {
+    background-image: url('image (2).jpeg');
+}
+
+.img3 {
+    background-image: url('image (3).jpeg');
+}
+
+.project h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.project p {
+    color: #89847b;
+    font-size: 13px;
+}
+
+.services {
+    padding: 100px 9%;
+    background: #e8e5de;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+}
+
+.service {
+    padding: 30px 0;
+    border-top: 1px solid #c9c4b9;
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.service span {
+    color: #a17b50;
+}
+
+.service h3 {
+    font-size: 20px;
+}
+
+.service p {
+    color: #77736c;
+    font-size: 14px;
+}
+
+.contact {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 35px;
+}
+
+footer {
+    padding: 30px 9%;
+    border-top: 1px solid #d6d1c8;
+    display: flex;
+    justify-content: space-between;
+    color: #89847b;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 6%;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #f2f0eb;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .about, .projects, .services {
+        padding: 75px 7%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .large {
+        grid-column: span 1;
+    }
+
+    .large .project-img, .project-img {
+        height: 300px;
+    }
+
+    .service {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .service p {
+        grid-column: 2;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
