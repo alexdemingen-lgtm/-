@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f5f2;
+    color: #17221f;
+    font-family: 'Manrope', sans-serif;
+}
+
+header {
+    height: 85px;
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #17221f;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #394640;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #78917e;
+}
+
+#menuBtn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(10,24,22,.7), transparent),
+        url('image.jpeg')
+        center/cover;
+}
+
+.hero-content > p, .tag {
+    color: #93b49d;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 1.12;
+    margin-bottom: 35px;
+}
+
+.hero a, .banner a {
+    display: inline-block;
+    padding: 17px 28px;
+    color: #17221f;
+    background: #c2d3c4;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.hero a:hover, .banner a:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.intro {
+    text-align: center;
+    padding: 120px 10%;
+}
+
+.intro h2, .destinations h2, .banner h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+}
+
+.description {
+    max-width: 550px;
+    margin: 25px auto 0;
+    line-height: 1.8;
+    color: #758079;
+}
+
+.destinations {
+    padding: 90px 9%;
+    background: white;
+}
+
+.destinations h2 {
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    background: #f4f5f2;
+}
+
+.photo {
+    height: 340px;
+    background-position: center;
+    background-size: cover;
+    transition: .5s;
+}
+
+.card:hover .photo {
+    transform: scale(1.04);
+}
+
+.photo1 {
+    background-image: url('image (1).jpeg');
+}
+
+.photo2 {
+    background-image: url('image (2).jpeg');
+}
+
+.photo3 {
+    background-image: url('image (3).jpeg');
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: #758079;
+    font-size: 14px;
+}
+
+.banner {
+    text-align: center;
+    padding: 120px 20px;
+    background: #172d28;
+    color: white;
+}
+
+.banner h2 {
+    margin-bottom: 35px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 9%;
+    color: #758079;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 6%;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: white;
+        flex-direction: column;
+        z-index: 10;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 60px 7%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .intro, .destinations {
+        padding: 75px 7%;
+    }
+
+    .photo {
+        height: 280px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
