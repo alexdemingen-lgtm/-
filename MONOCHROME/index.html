@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONOCHROME — одежда</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">MONOCHROME</a>
+        <button class="menu-button" id="menuButton">☰</button>
+        <nav class="nav" id="nav">
+            <a href="#collection">Коллекция</a>
+            <a href="#story">О бренде</a>
+            <a href="#details">Наш подход</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">НОВАЯ КОЛЛЕКЦИЯ / 2026</p>
+                <h1>Меньше шума.<br>Больше стиля.</h1>
+                <p>
+                    Одежда на каждый день, в которой
+                    простота становится главным акцентом.
+                </p>
+                <a href="#collection" class="button">Смотреть коллекцию</a>
+            </div>
+        </section>
+
+        <section class="section" id="collection">
+            <div class="section-title">
+                <p class="eyebrow">ИЗБРАННОЕ</p>
+                <h2>Основы гардероба</h2>
+                <p>Лаконичные вещи, которые легко сочетать между собой.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter-button active" data-filter="all">Все</button>
+                <button class="filter-button" data-filter="tops">Верх</button>
+                <button class="filter-button" data-filter="bottoms">Низ</button>
+                <button class="filter-button" data-filter="accessories">Аксессуары</button>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card" data-category="tops">
+                    <img src="product6.jpg  " alt="Футболка">
+                    <div class="product-info">
+                        <div>
+                            <h3>Футболка Basic</h3>
+                            <p>Хлопок · Белый</p>
+                        </div>
+                        <strong>2 900 ₽</strong>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="tops">
+                    <img src="product1.jpg" alt="Рубашка">
+                    <div class="product-info">
+                        <div>
+                            <h3>Рубашка Form</h3>
+                            <p>Хлопок · Молочный</p>
+                        </div>
+                        <strong>5 400 ₽</strong>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bottoms">
+                    <img src="product2.jpg" alt="Брюки">
+                    <div class="product-info">
+                        <div>
+                            <h3>Брюки Line</h3>
+                            <p>Прямой крой · Чёрный</p>
+                        </div>
+                        <strong>6 200 ₽</strong>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="accessories">
+                    <img src="product3.jpg" alt="Сумка">
+                    <div class="product-info">
+                        <div>
+                            <h3>Сумка Daily</h3>
+                            <p>Минимализм · Чёрный</p>
+                        </div>
+                        <strong>3 700 ₽</strong>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bottoms">
+                    <img src="product4.jpg" alt="Джинсы">
+                    <div class="product-info">
+                        <div>
+                            <h3>Джинсы Relax</h3>
+                            <p>Деним · Голубой</p>
+                        </div>
+                        <strong>6 800 ₽</strong>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="tops">
+                    <img src="product5.jpg" alt="Свитшот">
+                    <div class="product-info">
+                        <div>
+                            <h3>Свитшот Soft</h3>
+                            <p>Хлопок · Серый</p>
+                        </div>
+                        <strong>4 900 ₽</strong>
+                    </div>
+                </article>
+            </div>
+            <p class="empty-message" id="emptyMessage">
+                В этой категории пока нет товаров.
+            </p>
+        </section>
+
+        <section class="story" id="story">
+            <div class="story-text">
+                <p class="eyebrow">НАША ИДЕЯ</p>
+                <h2>Стиль не должен быть сложным.</h2>
+                <p>
+                    MONOCHROME — концептуальный бренд повседневной одежды.
+                    Мы любим спокойные цвета, понятные формы
+                    и вещи, которые остаются актуальными не один сезон.
+                </p>
+                <p>
+                    Вместо громких деталей — качественная основа.
+                    Вместо сложных сочетаний — свобода быть собой.
+                </p>
+            </div>
+            <div class="story-image">
+                <img src="story.jpg" alt="Минималистичный образ">
+            </div>
+        </section>
+
+        <section class="section details" id="details">
+            <div class="section-title">
+                <p class="eyebrow">НАШ ПОДХОД</p>
+                <h2>Три простых принципа</h2>
+            </div>
+            <div class="detail-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Простота</h3>
+                    <p>Чистые силуэты и спокойная цветовая палитра.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Удобство</h3>
+                    <p>Одежда, в которой комфортно каждый день.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Сочетаемость</h3>
+                    <p>Вещи, которые легко собрать в единый образ.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <p class="eyebrow">ОСТАВАЙТЕСЬ НА СВЯЗИ</p>
+            <h2>Найди свой простой стиль.</h2>
+            <p>По вопросам коллекции и сотрудничества напишите нам.</p>
+            <a href="mailto:hello@monochrome.example" class="button button-dark">Написать нам</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="logo">MONOCHROME</a>
+        <p>Учебный проект. 2026</p>
+        <a href="#home">Наверх ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
